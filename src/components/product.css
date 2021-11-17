@@ -1,8 +1,17 @@
 .product{
-    background: white;
+    background: rgb(105, 105, 105);
+    backdrop-filter: blur(12px);
     border: 1px solid black;
+    border-radius: 3px;
     display: inline-block;
     width: 260px;
     margin: 10px 10px 5px 0px;
     padding: 10px;
+    color: whitesmoke;
+    box-shadow:-1px 1px 3px 0 black;
+
+}
+.product img:hover{
+    transform: scale(125%);
+    overflow: hidden;
 }
