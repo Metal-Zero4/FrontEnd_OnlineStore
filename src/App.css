@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  background-color: lightgray;
+  background-color: lightslategray;
+  background-image: url("./src-img/clouds.png");
 }
 
 .App-logo {
