@@ -1,3 +1,4 @@
+import axios from "axios"
 const data = [
     {
         "_id": "1023",
@@ -67,17 +68,24 @@ const data = [
 
 
 
-class DataService{
-    getCatalog(){
-    // To-do: call the server to retrieve the catalog
-
-    //work with mock data (temporal)
-    return data;
+class DataService {
+    async getCatalog() {
+      // TODO: call the servicer to retrieve the catalog
+      let resp = await axios.get("http://127.0.0.1:5000/api/catalog");
+      return resp.data;
+  
+      // work with mock data (temporal information)
+      //return data;
     }
-    
-    saveProduct(){}
-
-    login(){}
-}
-
-export default DataService;
+    async getCategories() {
+      let resp = await axios.get("http://127.0.0.1:5000/api/products/categories");
+      return resp.data;
+    }
+  
+    async submitOrder(order) {
+      let response = await axios.post("http://127.0.0.1:5000/api/order", order);
+      return response.data;
+    }
+  }
+  export default DataService;
+  

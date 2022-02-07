@@ -30,10 +30,6 @@ const GlobalState = (props) => {
             copy.push(product); //add it to cart
         }
 
-
-
-        copy.push(product);
-
         setMyCart(copy);
     };
 

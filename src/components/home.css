@@ -1,0 +1,30 @@
+.home-page{
+    height: 34.77rem;
+}
+.welcome{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+h4{
+    margin-bottom: 5rem;
+}
+
+.catalog-link{
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.body{
+    background: #53434320;
+    backdrop-filter: blur(12px);
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}

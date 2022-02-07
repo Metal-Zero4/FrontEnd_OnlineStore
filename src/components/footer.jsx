@@ -2,8 +2,7 @@ import "./footer.css";
 
 const footer = () => {
     return <div className="footer"> 
-        <h3>Footer Here</h3>
-        <div></div>
+        <p>All Copyrights reserved &copy; 2021 Angel Garcia and Cohort 23</p>
     </div>;
 
 }

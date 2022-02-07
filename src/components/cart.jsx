@@ -2,6 +2,7 @@ import { useContext } from "react";
 import storeContext from"../context/storeContext";
 import "./cart.css";
 import CartItem from "./cartItem";
+import DataService from "../services/dataService";
 
 const Cart = (props) => {
     const cart = useContext(storeContext).cart;
@@ -16,7 +17,18 @@ const Cart = (props) => {
       
 
         return total.toFixed(2);
-    }
+    };
+
+    const submitOrder = () => {
+      console.log("You Clicked Submit order!");
+      let order = {
+        user: 1231231,
+        products: cart,
+      };
+      let service = new DataService();
+      service.submitOrder(order);
+    };
+  
 
     return (
         <div className="cart-page">
@@ -36,7 +48,7 @@ const Cart = (props) => {
             <hr />
             <h6>${getTotal()}</h6>
             <hr />
-            <button className="btn btn-dark">Proceed to payment</button>
+            <button onClick={submitOrder} className="btn btn-dark">Proceed to payment</button>
           </div>
         </section>
       </div>
